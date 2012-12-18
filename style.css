@@ -16,18 +16,39 @@ height:600px;
 margin:auto;
 margin-top:50px;
 
-background:#ddd;	
+background:#ddd;
+
+border-radius:20px;
+-webkit-border-radius:20px;	
 }
 
-#box1{
+#play{
 margin:auto;
 
 background:#1076d6;
 
-width:150px;
-height:150px;	
+width:600px;
+height:200px;	
 
--webkit-animation:spin 1s infinite ease-in-out;
+border-radius:20px;
+-webkit-border-radius:20px;	
+
+-webkit-animation:glow 1s infinite ease-in-out;
+}
+
+#win{
+margin:auto;
+
+background:#000;
+
+width:600px;
+height:50px;
+}
+
+@-webkit-keyframes glow{
+0% {box-shadow: 0 0 10px #2187e7;}
+50% {box-shadow: 0 0 80px #2187e7;}
+100% {box-shadow: 0 0 10px #2187e7;}	
 }
 
 @-webkit-keyframes spin{
