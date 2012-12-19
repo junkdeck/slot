@@ -33,7 +33,7 @@ height:200px;
 border-radius:20px;
 -webkit-border-radius:20px;	
 
--webkit-animation:glow 2s infinite ease-in-out;
+box-shadow: 0 0 10px #2187e7;
 }
 
 #win{
@@ -44,12 +44,6 @@ width:600px;
 height:50px;
 
 -webkit-animation:spin 3s infinite ease-in-out;
-}
-
-@-webkit-keyframes glow{
-0% {box-shadow: 0 0 10px #2187e7;}
-50% {box-shadow: 0 0 80px #2187e7;}
-100% {box-shadow: 0 0 10px #2187e7;}	
 }
 
 @-webkit-keyframes spin{
