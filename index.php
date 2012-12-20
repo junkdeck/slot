@@ -41,13 +41,43 @@ session_start();
 					$_SESSION['points'] = $cPoints;
 				}
 				print $cPoints;
+				
+				if($cPoints > 0)
+				{
+					print "<div id='spin'>
+					<form method='POST'>
+						<input type='submit' name='spin' id='spin' value='Spin!' />
+					</form></div>
+					";
+					if(isset($_POST['spin']))
+					{
+						$cPoints = $cPoints - 5;
+						$_SESSION['points'] = $cPoints;
+					}
+				}
+				if($cPoints <= 0)
+				{
+					$cPoints = 0;
+					print "
+					<form method='POST'>
+						<input type='text' name='cred' id='cred' />
+						<input type='submit' name='credSubmit' id='credSubmit'value='Put coins' />
+					</form>
+					";
+					if(isset($_POST['credSubmit']))
+					{
+						$cred = $_POST['cred'];
+						
+					}
+				}
             ?>
         </div> 
-        <?php if (isset($pointWin)){print $pointWin;} ?>  
     </div>
     
     <div id="reset">
+    <form method="POST">
     <input type="submit" name="clear" id="clear" value="Clear Session" />
+    </form>
     <?php
 	
 	if(isset($_POST['clear']))
