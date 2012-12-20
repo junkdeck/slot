@@ -46,6 +46,13 @@ height:50px;
 -webkit-animation:spin 3s infinite ease-in-out;
 }
 
+#reset
+{
+margin:auto;
+width:50px
+height:20px;	
+}
+
 @-webkit-keyframes spin{
 0% {-webkit-transform:rotate(-3deg);}
 50% {-webkit-transform:rotate(3deg);}
